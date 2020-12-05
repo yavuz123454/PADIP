@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="PADIP.MainPage">
+    <ContentPage.Content>
+        <StackLayout  BackgroundColor="LightPink" >
+            <Label Text="PASS ÖLÇEĞİ" FontSize="Large" HorizontalOptions="CenterAndExpand" />
+            <ListView x:Name="myListView" RowHeight="90">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell >
+                            <StackLayout >
+                                <StackLayout>
+                                    <Label Text="{Binding Soru}" TextColor="White" FontAttributes="Bold" />
+                                </StackLayout>
+                                <Grid  Padding="5">
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition />
+
+
+                                </Grid.ColumnDefinitions>
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition />
+                                  
+                                </Grid.RowDefinitions>
+
+
+                                    <CheckBox  Grid.Row="0" Grid.Column="0" CheckedChanged="CheckBox_CheckedChanged" />
+                                    <CheckBox  Grid.Row="0" Grid.Column="1" CheckedChanged="CheckBox_CheckedChanged_1"/>
+                                    <CheckBox  Grid.Row="0" Grid.Column="2" CheckedChanged="CheckBox_CheckedChanged_2"/>
+                                    <CheckBox  Grid.Row="0" Grid.Column="3" CheckedChanged="CheckBox_CheckedChanged_3"/>
+
+                                </Grid>
+                                
+                                
+        </StackLayout>
+
+        </ViewCell>
+
+
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button x:Name="btnpass" Text="Bitti" Clicked="btnpass_Clicked"/>
+        </StackLayout>
+        </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="PADIP.MasterPage"
+    Title="Personal Organiser"
+             Padding="0,40,0,0"
+             IconImageSource="hamburger.png">
+
+
+
+    <ScrollView>
+        <StackLayout BackgroundColor="#FFFFFF"  >
+
+            <Expander >
+                <Expander.Header>
+                    <StackLayout Padding="8,3" Margin="0,5" >
+                        <Frame  BackgroundColor="#EEEEEE"  HasShadow="False" CornerRadius="10" Padding="7,7"  >
+                            <Label Text="Sizi Tanıyalım" 
+                                   FontSize="18"
+                        FontAttributes="Bold"/>
+                        </Frame>
+                    </StackLayout>
+                </Expander.Header>
+                <StackLayout>
+                    <Button x:Name="btnanne" Text="Anneye ait veri formu" HorizontalOptions="Center" Clicked="btnanne_Clicked"/>
+                    <Button x:Name="btngebeson" Text="Son gebelik dönemi formu" HorizontalOptions="Center" Clicked="btngebeson_Clicked"/>
+                    <Button x:Name="btngebeonce" Text="Önceki gebelik formu" HorizontalOptions="Center" Clicked="btngebeonce_Clicked"/>
+                    <Button x:Name="btnes" Text="Eş aile ile ilgili form" HorizontalOptions="Center" Clicked="btnes_Clicked"/>
+
+                </StackLayout>
+
+
+            </Expander>
+
+
+
+
+            <Expander >
+                <Expander.Header>
+                    <StackLayout Padding="8,3" Margin="0,5" >
+                        <Frame  BackgroundColor="#EEEEEE"  HasShadow="False" CornerRadius="10" Padding="7,7"  >
+                            <Label Text="Gebeliğin 1. ayı" 
+                                    FontSize="18"
+                        FontAttributes="Bold"/>
+                        </Frame>
+                    </StackLayout>
+                </Expander.Header>
+                <Expander.ContentTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <Button Text="EPDS"  HorizontalOptions="Center"/>
+                            <Button Text="PASS"  HorizontalOptions="Center"/>
+                            <Button Text="PUKI"  HorizontalOptions="Center"/>
+
+                            <Button Text="SLES" HorizontalOptions="Center"/>
+                            <Button Text="WHOQOL" HorizontalOptions="Center"/>
+                            <Button Text="Aylık Takip Formu"  HorizontalOptions="Center"/>
+                        </StackLayout>
+                    </DataTemplate>
+                </Expander.ContentTemplate>
+
+            </Expander>
+
+
+            <Expander  >
+                <Expander.Header>
+                    <StackLayout Padding="8,3" Margin="0,5">
+                        <Frame  BackgroundColor="#EEEEEE"  HasShadow="False" CornerRadius="10" Padding="7,7"  >
+                            <Label Text="Gebeliğin 2. ayı" 
+                                    FontSize="18"
+                        FontAttributes="Bold"/>
+                        </Frame>
+
+                    </StackLayout>
+                </Expander.Header>
+                <Expander.ContentTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <Button Text="EPDS"  HorizontalOptions="Center"/>
+                            <Button Text="PASS"  HorizontalOptions="Center"/>
+                            <Button Text="PUKI"  HorizontalOptions="Center"/>
+                            <Button Text="Aylık Takip Formu"  HorizontalOptions="Center"/>
+                        </StackLayout>
+                    </DataTemplate>
+                </Expander.ContentTemplate>
+
+            </Expander>
+
+            <Expander  >
+                <Expander.Header>
+                    <StackLayout Padding="8,3" Margin="0,5">
+                        <Frame  BackgroundColor="#EEEEEE"  HasShadow="False" CornerRadius="10" Padding="7,7"  >
+                            <Label Text="Gebeliğin 3. ayı" 
+                                    FontSize="18"
+                        FontAttributes="Bold"/>
+                        </Frame>
+                    </StackLayout>
+                </Expander.Header>
+                <Expander.ContentTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <Button Text="EPDS"  HorizontalOptions="Center"/>
+                            <Button Text="PASS"  HorizontalOptions="Center"/>
+                            <Button Text="PUKI"  HorizontalOptions="Center"/>
+                            <Button Text="Aylık Takip Formu"  HorizontalOptions="Center"/>
+                        </StackLayout>
+                    </DataTemplate>
+                </Expander.ContentTemplate>
+
+            </Expander>
+
+            <Expander  >
+                <Expander.Header>
+                    <StackLayout Padding="8,3" Margin="0,5">
+                        <Frame  BackgroundColor="#EEEEEE"  HasShadow="False" CornerRadius="10" Padding="7,7"  >
+                            <Label Text="Gebeliğin 4. ayı" 
+                                    FontSize="18"
+                        FontAttributes="Bold"/>
+                        </Frame>
+
+                    </StackLayout>
+                </Expander.Header>
+                <Expander.ContentTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <Button Text="EPDS"  HorizontalOptions="Center"/>
+                            <Button Text="PASS"  HorizontalOptions="Center"/>
+                            <Button Text="PUKI"  HorizontalOptions="Center"/>
+                            <Button Text="Aylık Takip Formu"  HorizontalOptions="Center"/>
+                        </StackLayout>
+                    </DataTemplate>
+                </Expander.ContentTemplate>
+
+            </Expander>
+
+            <Expander >
+                <Expander.Header>
+                    <StackLayout Padding="8,3" Margin="0,5">
+                        <Frame  BackgroundColor="#EEEEEE"  HasShadow="False" CornerRadius="10" Padding="7,7"  >
+                            <Label Text="Gebeliğin 5. ayı" 
+                                    FontSize="18"
+                        FontAttributes="Bold"/>
+                        </Frame>
+                    </StackLayout>
+                </Expander.Header>
+                <Expander.ContentTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <Button Text="EPDS"  HorizontalOptions="Center"/>
+                            <Button Text="PASS"  HorizontalOptions="Center"/>
+                            <Button Text="PUKI"  HorizontalOptions="Center"/>
+                            <Button Text="Aylık Takip Formu"  HorizontalOptions="Center"/>
+                        </StackLayout>
+                    </DataTemplate>
+                </Expander.ContentTemplate>
+
+            </Expander>
+            <Expander  >
+
+                <Expander.Header>
+                    <StackLayout Padding="8,3" Margin="0,5">
+                        <Frame  BackgroundColor="#EEEEEE"  HasShadow="False" CornerRadius="10" Padding="7,7"  >
+                            <Label Text="Gebeliğin 6. ayı" 
+                                    FontSize="18"
+                        FontAttributes="Bold"/>
+                        </Frame>
+                    </StackLayout>
+                </Expander.Header>
+                <Expander.ContentTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <Button Text="EPDS"  HorizontalOptions="Center"/>
+                            <Button Text="PASS"  HorizontalOptions="Center"/>
+                            <Button Text="PUKI"  HorizontalOptions="Center"/>
+                            <Button Text="Aylık Takip Formu"  HorizontalOptions="Center"/>
+                        </StackLayout>
+                    </DataTemplate>
+                </Expander.ContentTemplate>
+
+            </Expander>
+            <Expander  >
+                <Expander.Header>
+                    <StackLayout Padding="8,3" Margin="0,5">
+                        <Frame  BackgroundColor="#EEEEEE"  HasShadow="False" CornerRadius="10" Padding="7,7"  >
+                            <Label Text="Gebeliğin 7. ayı" 
+                                    FontSize="18"
+                        FontAttributes="Bold"/>
+                        </Frame>
+                    </StackLayout>
+                </Expander.Header>
+                <Expander.ContentTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <Button Text="EPDS"  HorizontalOptions="Center"/>
+                            <Button Text="PASS"  HorizontalOptions="Center"/>
+                            <Button Text="PUKI"  HorizontalOptions="Center"/>
+                            <Button Text="Aylık Takip Formu"  HorizontalOptions="Center"/>
+                        </StackLayout>
+                    </DataTemplate>
+                </Expander.ContentTemplate>
+
+            </Expander>
+            <Expander >
+                <Expander.Header>
+                    <StackLayout Padding="8,3" Margin="0,5">
+                        <Frame  BackgroundColor="#EEEEEE"  HasShadow="False" CornerRadius="10" Padding="7,7"  >
+                            <Label Text="Gebeliğin 8. ayı" 
+                                    FontSize="18"
+                        FontAttributes="Bold"/>
+                        </Frame>
+                    </StackLayout>
+                </Expander.Header>
+                <Expander.ContentTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <Button Text="EPDS"  HorizontalOptions="Center"/>
+                            <Button Text="PASS"  HorizontalOptions="Center"/>
+                            <Button Text="PUKI"  HorizontalOptions="Center"/>
+                            <Button Text="Aylık Takip Formu"  HorizontalOptions="Center"/>
+                        </StackLayout>
+                    </DataTemplate>
+                </Expander.ContentTemplate>
+
+            </Expander>
+            <Expander  >
+                <Expander.Header>
+                    <StackLayout Padding="8,3" Margin="0,5">
+                        <Frame  BackgroundColor="#EEEEEE"  HasShadow="False" CornerRadius="10" Padding="7,7"  >
+                            <Label Text="Gebeliğin 9. ayı" 
+                                    FontSize="18"
+                        FontAttributes="Bold"/>
+                        </Frame>
+                    </StackLayout>
+                </Expander.Header>
+                <Expander.ContentTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <Button Text="EPDS"  HorizontalOptions="Center"/>
+                            <Button Text="PASS"  HorizontalOptions="Center"/>
+                            <Button Text="PUKI"  HorizontalOptions="Center"/>
+
+                            <Button Text="SLES" HorizontalOptions="Center"/>
+                            <Button Text="WHOQOL" HorizontalOptions="Center"/>
+                            <Button Text="Aylık Takip Formu"  HorizontalOptions="Center"/>
+                        </StackLayout>
+                    </DataTemplate>
+                </Expander.ContentTemplate>
+
+            </Expander>
+
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+           
+          x:Class="PADIP.NavigationPagesFolder.Datacell">
+
+    <StackLayout x:Name="mystack2">
+        <Label Text="{Binding SoruPSQI}" TextColor="White" FontAttributes="Bold" />
+        <StackLayout Orientation="Horizontal" >
+            <CheckBox IsVisible="{Binding Soru}"  CheckedChanged="CheckBox_CheckedChanged"/>
+            <Label Text="{Binding Cevap1}" IsVisible="{Binding Soru}" FontSize="Large" />
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <CheckBox IsVisible="{Binding Soru}"  CheckedChanged="CheckBox_CheckedChanged_1"/>
+            <Label Text="{Binding Cevap2}" IsVisible="{Binding Soru}" FontSize="Large"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <CheckBox IsVisible="{Binding Soru}"  CheckedChanged="CheckBox_CheckedChanged_2"/>
+            <Label Text="{Binding Cevap3}" IsVisible="{Binding Soru}" FontSize="Large"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <CheckBox IsVisible="{Binding Soru}"  CheckedChanged="CheckBox_CheckedChanged_3"/>
+            <Label Text="{Binding Cevap4}" IsVisible="{Binding Soru}" FontSize="Large"/>
+        </StackLayout>
+        
+        
+        <Button x:Name="mybutton" Clicked="Button_Clicked" Text="{Binding Numara}" IsVisible="false"/>
+        <TimePicker x:Name="tpicker" Time="0:0:0" IsVisible="{Binding Soruters}" Format="HH:mm" PropertyChanged="tpicker_PropertyChanged"/>
+        <Entry x:Name="myentry" PropertyChanged="myentry_PropertyChanged" TextChanged="Entry_TextChanged"  Keyboard="Numeric" IsVisible="{Binding Soruters2}"  VerticalOptions="CenterAndExpand"/>
+        <!--<TimePicker   x:Name="timepicker" PropertyChanged="timepicker_PropertyChanged" />-->
+    </StackLayout>
+
+
+</ViewCell>

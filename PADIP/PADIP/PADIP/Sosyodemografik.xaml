@@ -1,0 +1,934 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="PADIP.Sosyodemografik"   Title="Veri Formu">
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout BackgroundColor="White" >
+                <Label x:Name="lblsorusayisi" Text="{Binding Sorusayisi}"/>
+             
+               
+
+                <Label x:Name="lblad"  Text="1.Adınız Soyadınız: "  Padding="10,10,0,0" FontSize="Medium" TextColor="DeepPink" />
+                <Entry x:Name="entryad"  Text="{Binding Title}  " PlaceholderColor="White" TextColor="White" />
+
+                <Label x:Name="lblyas"  Text="2-Yaşınız"  Padding="10,10,0,0" FontSize="Medium" TextColor="DeepPink" />
+                <Entry x:Name="entryyas"  Keyboard="Numeric" Text="{Binding Yas}   " PlaceholderColor="White" TextColor="White" />
+               
+                <Label x:Name="lblyer"  Text="3-Yaşadığınız Yer(İlçe)" TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium"/>
+                <Picker x:Name="pickeryer" Title="{Binding Yer}" TextColor="White" TitleColor="White" SelectedItem="{Binding Yer}"  >
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Kent Merkezi</x:String>
+                            <x:String>Kırsal</x:String>
+                         
+
+                        </x:Array>
+                    </Picker.ItemsSource>
+
+                </Picker>
+                <Label x:Name="lblmedeni"  Text="4-Medeni Haliniz" TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium"/>
+                <Picker x:Name="pickermedeni" Title="{Binding Medeni}" TextColor="White" TitleColor="White" SelectedItem="{Binding Medeni}"  >
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Evli</x:String>
+                            <x:String>Bekar</x:String>
+                            <x:String>Dul</x:String>
+                            <x:String>Boşanmış</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+
+                </Picker>
+
+                <Label x:Name="lblboy"  Text="5-Boyunuz"  Padding="10,10,0,0" FontSize="Medium" TextColor="DeepPink" />
+                <Entry x:Name="entryboy" Text="{Binding Boy}  " PlaceholderColor="White" TextColor="White" />
+
+                <Label x:Name="lblkilo"  Text="6-Kilonuz"  Padding="10,10,0,0" FontSize="Medium" TextColor="DeepPink" />
+                <Entry x:Name="entrykilo"  Keyboard="Numeric" Text="{Binding Kilo}   " PlaceholderColor="White" TextColor="White" />
+
+                <Label x:Name="lblkilogebe"  Text="7-Kaç kilo ile gebe kaldınız ?"  Padding="10,10,0,0" FontSize="Medium" TextColor="DeepPink" />
+                <Entry x:Name="entrykilogebe"  Keyboard="Numeric" Text="{Binding Kilogebe}   " PlaceholderColor="White" TextColor="White" />
+
+                <Label x:Name="lblegitim"  Text="8-Eğitim durumunuz: " TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium"/>
+                <Picker x:Name="pickeregitim" Title="{Binding Egitim}" TextColor="White" TitleColor="White" SelectedItem="{Binding Egitim}"  >
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Okuryazar değil</x:String>
+                            <x:String>Okuryazar</x:String>
+                            <x:String>İlkokul mezunu</x:String>
+                            <x:String>Ortaokul mezunu</x:String>
+                            <x:String>Lise mezunu</x:String>
+                            <x:String>Üniversite mezunu</x:String>
+                            <x:String>Yüksek Lisans/Doktora mezunu</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+
+                </Picker>
+
+                <Label x:Name="lblcalisma"  Text="9-Çalışma durumunuz:  " TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium"/>
+                <Picker x:Name="pickercalisma" Title="{Binding Calisma}" TextColor="White" TitleColor="White" SelectedItem="{Binding Calisma}"  >
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Ev hanımı</x:String>
+                            <x:String>Düzenli bir işte çalışıyorum</x:String>
+                            <x:String>Düzensiz olarak çalışıyorum</x:String>
+                          
+                        </x:Array>
+                    </Picker.ItemsSource>
+
+                </Picker>
+                <Label x:Name="lblguvence"  Text="10-Sağlık güvenceniz var mı?  " TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium"/>
+                <Picker x:Name="pickerguvence" Title="{Binding Guvence}" TextColor="White" TitleColor="White" SelectedItem="{Binding Guvence}"  >
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Var</x:String>
+                            <x:String>Yok</x:String>
+                           
+
+                        </x:Array>
+                    </Picker.ItemsSource>
+
+                </Picker>
+                <Label x:Name="lblbirlikte"  Text="11-Kiminle birlikte yaşıyorsunuz? " TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium"/>
+                <Picker x:Name="pickerbirlikte" Title="{Binding Birlikte}" TextColor="White" TitleColor="White" SelectedItem="{Binding Birlikte}"  >
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Yalnız Eş</x:String>
+                            <x:String>Eş ve çocukları</x:String>
+                            <x:String>Eşi, çocukları ve eşinin ailesi</x:String>
+                            <x:String>Eşi çocukları ve kendi ailesi</x:String>
+                            <x:String>Diğer</x:String>
+                         </x:Array>
+                    </Picker.ItemsSource>
+
+                </Picker>
+
+                <Label x:Name="lbltoplam"  Text="12-Evinizde sürekli yaşayan toplam kişi sayısı"  Padding="10,10,0,0" FontSize="Medium" TextColor="DeepPink" />
+                <Entry x:Name="entrytoplam"  Keyboard="Numeric" Text="{Binding Evkisi}   " TextColor="White" />
+
+                <Label x:Name="lblgelir"  Text="13-Ailenizin toplam gelir düzeyi ne kadar? " TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium"/>
+                <Picker x:Name="pickergelir"
+                        Title="{Binding Tgelir}" TextColor="White" TitleColor="White" SelectedItem="{Binding Tgelir}"  >
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>2000 tl ve altı</x:String>
+                            <x:String>2001-4000</x:String>
+                            <x:String>4001-6000</x:String>
+                            <x:String>6001-8000</x:String>
+                            <x:String>8001-10.000</x:String>
+                            <x:String>10.000 üstü</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+
+                </Picker>
+
+                <Label x:Name="lbltopgebe"  Text="14-Toplam kaç gebelik geçirdiniz (şimdiki gebelik dahil)?"  Padding="10,10,0,0" FontSize="Medium" TextColor="DeepPink" />
+                <Entry x:Name="entrytopgebe"  Keyboard="Numeric" Text="{Binding Kacgebe}   " PlaceholderColor="White" TextColor="White" />
+
+                <Label x:Name="lblkaccocuk"  Text="15-Yaşayan kaç çocuğunuz var?"  Padding="10,10,0,0" FontSize="Medium" TextColor="DeepPink" />
+                <Entry x:Name="enrtykaccocuk" Keyboard="Numeric" Text="{Binding Kaccocuk}   " PlaceholderColor="White" TextColor="White" />
+
+                <Label x:Name="lbloludogum"  Text="16-Daha önce ölü doğum ya da düşük yaşadınız mı? " TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium"/>
+                <Picker x:Name="pickeroludogum" Title="{Binding Odogum}" TextColor="White" TitleColor="White" SelectedItem="{Binding Odogum}"  >
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Evet</x:String>
+                            <x:String>Hayır</x:String>
+                            <x:String>Evetse 1 kere</x:String>
+                            <x:String>Evetse 2 kere</x:String>
+                            <x:String>Evetse 3 kere</x:String>
+                            <x:String>Evetse 4 kere</x:String>
+                            <x:String>Evetse 5 kere</x:String>
+
+
+                        </x:Array>
+                    </Picker.ItemsSource>
+
+                </Picker>
+
+                <Label x:Name="lbloludogum2" Text="16b-Daha önce erkenyaşta ölen çocuğunuz oldu mu? " TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium"/>
+                <Picker x:Name="pickeroludogum2" Title="{Binding Ococuk}" TextColor="White" TitleColor="White" SelectedItem="{Binding Ococuk}"  >
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Evet</x:String>
+                            <x:String>Hayır</x:String>
+                            <x:String>Evetse 1 kere</x:String>
+                            <x:String>Evetse 2 kere</x:String>
+                            <x:String>Evetse 3 kere</x:String>
+                            <x:String>Evetse 4 kere</x:String>
+                            <x:String>Evetse 5 kere</x:String>
+
+                        </x:Array>
+                    </Picker.ItemsSource>
+
+                </Picker>
+
+                <Label x:Name="lbloludogum3" Text="16c-Daha önce kürtaj geçirdiniz mi? " TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium"/>
+                <Picker  x:Name="pickeroludogum3" Title="{Binding Kurtaj}" TextColor="White" TitleColor="White" SelectedItem="{Binding Kurtaj}"  >
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Evet</x:String>
+                            <x:String>Hayır</x:String>
+                            <x:String>Evetse 1 kere</x:String>
+                            <x:String>Evetse 2 kere</x:String>
+                            <x:String>Evetse 3 kere</x:String>
+                            <x:String>Evetse 4 kere</x:String>
+                            <x:String>Evetse 5 kere</x:String>
+
+                        </x:Array>
+                    </Picker.ItemsSource>
+
+                </Picker>
+
+                <Label x:Name="lblkronik"  Text="17-Gebelik ÖNCESİNDE kronik bir hastalığınız var mıydı? (Diyabet, hipertansiyon, romatizmal hastalık, tiroid hastalığı, migren, reflü, ortopedik hastalık vb.) " TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium"/>
+                <Picker x:Name="pickerkronik" Title="{Binding Khastalik}" TextColor="White" TitleColor="White" SelectedItem="{Binding Khastalik}"  >
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Evet</x:String>
+                            <x:String>Hayır</x:String>
+                       
+                        </x:Array>
+                    </Picker.ItemsSource>
+
+                </Picker>
+                <Label x:Name="lblkronik2"  Text="18-Gebelik öncesinde kronik hastalığınız varsa, günlük yaşamınızı olumsuz etkiliyor muydu?" TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium"/>
+                <Picker x:Name="pickerkronik2" Title="{Binding Khastalik2}" TextColor="White" TitleColor="White" SelectedItem="{Binding Khastalik2}"  >
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Evet</x:String>
+                            <x:String>Hayır</x:String>
+
+                        </x:Array>
+                    </Picker.ItemsSource>
+
+                </Picker>
+
+                <Label x:Name="lblgebehaf"  Text="19-Gebelik Haftanız:"  Padding="10,10,0,0" FontSize="Medium" TextColor="DeepPink" />
+                <Entry x:Name="entrygebehaf"  Keyboard="Numeric" Text="{Binding Ghafta2}   " PlaceholderColor="White" TextColor="White" />
+
+                <Label x:Name="lblbebecins"  Text="20-Bebeğin Cinsiyeti: " TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium"/>
+                <Picker x:Name="pickercins" Title="{Binding Cinsiyet}" TextColor="White" TitleColor="White" SelectedItem="{Binding Cinsiyet}"  >
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Kız</x:String>
+                            <x:String>Erkek</x:String>
+                            <x:String>Belli Değil</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+
+                </Picker>
+
+                <Label x:Name="lblgebelikd"   Text="21-Şu anki gebeliğinizi nasıl tanımlarsınız? " TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium"/>
+                <Picker x:Name="pickergebelikd" Title="{Binding Gebelikd}" TextColor="White" TitleColor="White" SelectedItem="{Binding Gebelikd}"  >
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Planlı gebelik</x:String>
+                            <x:String>Plansız(sürpriz) istenen gebelik</x:String>
+                            <x:String>Hem plansız  hem istenmeyen gebelik</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+
+                </Picker>
+
+                <Label x:Name="lbltedavi"  Text="22-Gebelik için herhangi bir tedavi aldınız mı?" TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium"/>
+                <Picker x:Name="pickertedavi" Title="{Binding Gebelikt}" TextColor="White" TitleColor="White" SelectedItem="{Binding Gebelikt}"  >
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Evet</x:String>
+                            <x:String>Hayır</x:String>
+                            </x:Array>
+                    </Picker.ItemsSource>
+
+                </Picker>
+
+                <Label x:Name="lbltakip"  Text="23-Gebelik takiplerine düzenli gidiyor musunuz? " TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium" />
+                <Picker x:Name="picker" Title="{Binding Gebeliktakip}" TextColor="White" TitleColor="White" SelectedIndexChanged="picker_SelectedIndexChanged" SelectedItem="{Binding Gebeliktakip}"  >
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Evet</x:String>
+                            <x:String>Hayır</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+
+                </Picker>
+
+                <Label x:Name="takiplabel"  Text="23b-Tahmini kaç kez takibe gittiniz?" TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium"/>
+                <Entry x:Name="entrylabel"  Keyboard="Numeric" Text="{Binding Gebeliktakipkac}   " PlaceholderColor="White" TextColor="White" />
+
+                <Label x:Name="lblgebesag"  Text="24-Şu anki gebeliğinizde bebekle ilgili bilinen bir sağlık sorunu var mı?" TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium" />
+                <Picker x:Name="pickergebesag"  Title="{Binding Gebelikbebeksag}" TextColor="White" TitleColor="White" SelectedIndexChanged="pickergebesag_SelectedIndexChanged" SelectedItem="{Binding Gebelikbebeksag}"  >
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Evet</x:String>
+                            <x:String>Hayır</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+
+                </Picker>
+
+                <Label x:Name="labelgebehast" Text="24b-Evet ise hastalığı belirtiniz:" TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium" />
+                <Picker x:Name="pickergebehast" Title="{Binding Gebelikbebekhas}" TextColor="White" TitleColor="White" SelectedItem="{Binding Gebelikbebekhas}"  >
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Kardiyak malformasyon (kalp hastalığı)</x:String>
+                            <x:String>IUGR (gelişme geriliği)</x:String>
+                            <x:String>Erken doğum</x:String>
+                            <x:String>Düşük doğum ağırlığı</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+
+                </Picker>
+
+                <Label x:Name="lblsorun" Text="25-Günlük yaşantınızda sorunlarınızı rahatça konuşabildiğiniz  insanlar var mı? " TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium" />
+                <Picker x:Name="pickersorun" Title="{Binding Gebelikrahat}" TextColor="White" TitleColor="White" SelectedIndexChanged="pickersorun_SelectedIndexChanged" SelectedItem="{Binding Gebelikrahat}"  >
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Evet var</x:String>
+                            <x:String>Hayır yok</x:String>
+                       
+                        </x:Array>
+                    </Picker.ItemsSource>
+
+                </Picker>
+
+
+                <Label x:Name="rahatlabel"  Text="25b-Varsa kaç kişi var?" TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium"/>
+                <Entry x:Name="rahatentry" Keyboard="Numeric" Text="{Binding Gebelikrahatkac}   " PlaceholderColor="White" TextColor="White" />
+
+                <Label x:Name="lblcinsiyet" Text="26-Gebelik öncesinde sizin bebeğin cinsiyetiyle ilgili tercihiniz var mıydı? (kız/erkek olmasını istiyordum)" TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium" />
+                <Picker x:Name="pickercinsiyet" Title="{Binding Gebelikcinsiyet}" TextColor="White" TitleColor="White"  SelectedItem="{Binding Gebelikcinsiyet}"  >
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Evet ve istediğim cinsiyette oldu</x:String>
+                            <x:String>Evet ama istediğim cinsiyette olmadı</x:String>
+                            <x:String>Hayır, cinsiyetiyle ilgili tercihim yok</x:String>
+
+                        </x:Array>
+                    </Picker.ItemsSource>
+
+                </Picker>
+
+                <Label x:Name="lblcinsiyet2" Text="27-Gebelik öncesinde eşinizin/ailenizin bebeğin cinsiyetiyle ilgili tercihi var mıydı? (kız/erkek olmasını istiyorlardı)" TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium" />
+                <Picker x:Name="pickercinsiyet2" Title="{Binding Gebelikacinsiyet}" TextColor="White" TitleColor="White"  SelectedItem="{Binding Gebelikacinsiyet}"  >
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Evet ve istediğim cinsiyette oldu</x:String>
+                            <x:String>Evet ama istediği cinsiyette olmadı</x:String>
+                            <x:String>Hayır, cinsiyetiyle ilgili tercihi yok</x:String>
+
+                        </x:Array>
+                    </Picker.ItemsSource>
+
+                </Picker>
+
+                <Label x:Name="lblgebelikhasta" Text="28-ŞU ANKİ gebeliğiniz sırasında ortaya çıkan bir hastalığınız oldu mu? (Birden fazla seçenek işaretleyebilirsiniz.)" TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium" />
+                <Picker x:Name="pickergebelikhasta" Title="{Binding Gebelikhasta}" TextColor="White" TitleColor="White"  SelectedItem="{Binding Gebelikhasta}"  >
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Hayır/Yok</x:String>
+                            <x:String>Diyabet (Gebelikte yüksek şeker)</x:String>
+                            <x:String>Hipertansiyon (Gebelikte yüksek tansiyon)</x:String>
+                            <x:String>Gebelik zehirlenmesi (Preeklampsi)</x:String>
+                            <x:String>Tiroid hastalığı (Guatr)</x:String>
+                            <x:String>Migren</x:String>
+                            <x:String>Plasenta Previa (Yanlış yerleşimli plasenta)</x:String>
+                            <x:String>Plasenta Dekolmanı (Plasentanın erken ayrılması)</x:String>
+                            <x:String>Migren</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+
+                </Picker>
+                <Label x:Name="labelgebelikhasta"  Text="28b-ŞU ANKİ gebeliğiniz sırasında ortaya çıkan bir başka bie hastalık oldu mu?" TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium"/>
+                <Entry x:Name="entrygebelikhasta" Keyboard="Numeric" Text="{Binding Gebelikahastadi}   " PlaceholderColor="White" TextColor="White" />
+
+                <Label x:Name="lblpsitani" Text="29a-ŞİMDİKİ gebeliğiniz sürecinde psikiyatrik bir tanı aldınız mı? " TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium" />
+                <Picker x:Name="pickerpsitani" Title="{Binding Gebelikpsihastami}" TextColor="White" TitleColor="White" SelectedIndexChanged="pickerpsitani_SelectedIndexChanged"  SelectedItem="{Binding Gebelikpsihastami}"  >
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Evet</x:String>
+                            <x:String>Hayır</x:String>
+
+                        </x:Array>
+                    </Picker.ItemsSource>
+
+                </Picker>
+
+                <Label x:Name="textgebepsihasta" Text="29b-Evetse ŞİMDİKİ gebeliğiniz sürecinde hangi psikiyatrik tanıyı aldınız? " TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium" />
+               
+                <Picker x:Name="pickergebepsihasta" Title="{Binding Gebelikpsihasta}" TextColor="White" TitleColor="White"  SelectedItem="{Binding Gebelikpsihasta}"  >
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Depresyon</x:String>
+                            <x:String>Anksiyete bozukluğu (kaygı bozukluğu)</x:String>
+                            <x:String>Bipolar bozukluk (iki uçlu duygudurum bozukluğu/manik depresif)</x:String>
+                            <x:String>Şizofreni (psikoz)</x:String>
+                            <x:String>Panik bozukluk (panik atak)</x:String>
+                           
+
+                        </x:Array>
+                    </Picker.ItemsSource>
+
+                </Picker>
+
+
+                <Label x:Name="labelgebelikpsihastadi" Text="29c-ŞİMDİKİ gebeliğiniz sürecinde yukarda bulunmayan bir hastalığınız varsa nedir? "   TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium" FlowDirection="MatchParent" />
+                <Entry x:Name="entrygebelikpsihastadi"  Keyboard="Numeric" Text="{Binding Gebelikpsihastadi}   " PlaceholderColor="White" TextColor="White" />
+
+                <Label x:Name="textgebepsited" Text="30- Şu anki gebeliğinizde psikiyatrik bir tanı  aldıysanız  bunun için bir ilaç tedavisi , EKT, TMS vb  gördünüz mü ?(birden fazla şık işaretleyebilirsiniz)" TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium" />
+                <Label x:Name="lbla" HorizontalOptions="Center" HorizontalTextAlignment="Center" Text="Hayır" TextColor="DeepPink" Padding="20,10,20,0" />
+                <CheckBox x:Name="checka" IsChecked="{Binding Gebecaka}" CheckedChanged="checka_CheckedChanged" HorizontalOptions="Center"/>
+
+                <Label x:Name="lblb" HorizontalOptions="Center" HorizontalTextAlignment="Center" Text="Gebelik öncesinde" TextColor="DeepPink" Padding="20,0,20,0" />
+                <CheckBox  x:Name="checkb" IsChecked="{Binding Gebecakb}" CheckedChanged="checkb_CheckedChanged"   HorizontalOptions="Center"/>
+
+                <Label x:Name="lblc" HorizontalOptions="Center" HorizontalTextAlignment="Center" Text="Gebelikte" TextColor="DeepPink" Padding="20,0,20,0" />
+                <CheckBox x:Name="checkc" IsChecked="{Binding Gebecakc}" CheckedChanged="checkc_CheckedChanged"  HorizontalOptions="Center"/>
+
+                <Label x:Name="lbld" HorizontalOptions="Center" HorizontalTextAlignment="Center" Text="Doğum Sonrasında" TextColor="DeepPink" Padding="20,0,20,0" />
+                <CheckBox   x:Name="checkd" IsChecked="{Binding Gebecakd}" CheckedChanged="checkd_CheckedChanged"   HorizontalOptions="Center"/>
+
+                <Label x:Name="textgebepsitee" Text="31- Şu anki gebeliğinizde psikiyatrik bir tanı  aldıysanız  bunun için bir psikoterapi aldınız mı ?(birden fazla şık işaretleyebilirsiniz)" TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium" />
+                <Label x:Name="lbla1" HorizontalOptions="Center" HorizontalTextAlignment="Center" Text="Hayır" TextColor="DeepPink" Padding="20,10,20,0" />
+                <CheckBox x:Name="checka1" IsChecked="{Binding Gebecaka1}" CheckedChanged="checka1_CheckedChanged" HorizontalOptions="Center"/>
+
+                <Label x:Name="lblb1" HorizontalOptions="Center" HorizontalTextAlignment="Center" Text="Gebelik öncesinde" TextColor="DeepPink" Padding="20,0,20,0" />
+                <CheckBox  x:Name="checkb1" IsChecked="{Binding Gebecakb1}"   CheckedChanged="checkb1_CheckedChanged" HorizontalOptions="Center"/>
+
+                <Label x:Name="lblc1" HorizontalOptions="Center" HorizontalTextAlignment="Center" Text="Gebelikte" TextColor="DeepPink" Padding="20,0,20,0" />
+                <CheckBox x:Name="checkc1" IsChecked="{Binding Gebecakc1}"  CheckedChanged="checkc1_CheckedChanged" HorizontalOptions="Center"/>
+
+                <Label x:Name="lbld1" HorizontalOptions="Center" HorizontalTextAlignment="Center" Text="Doğum Sonrasında" TextColor="DeepPink" Padding="20,0,20,0" />
+                <CheckBox   x:Name="checkd1" IsChecked="{Binding Gebecakd1}"  CheckedChanged="checkd1_CheckedChanged"  HorizontalOptions="Center"/>
+
+                <Label x:Name="lblpsitedavi" Text="32-Şu an psikiyatrik bir tedavi veya terapi görüyor musunuz?" TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium" />
+                <Picker x:Name="pickerpsitedavi" Title="{Binding Gebelikpsitedavi}" TextColor="White" TitleColor="White"   SelectedItem="{Binding Gebelikpsitedavi}"  >
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Evet</x:String>
+                            <x:String>Hayır</x:String>
+
+                        </x:Array>
+                    </Picker.ItemsSource>
+
+                </Picker>
+
+
+                <Label x:Name="lblpsibirak" Text="33-Gebelik nedeniyle bıraktığınız bir psikiyatrik tedavi oldu mu?  " TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium" />
+                <Picker x:Name="pickerpsibirak" Title="{Binding Gebelikpsibirak}" TextColor="White" TitleColor="White" SelectedIndexChanged="pickerpsibirak_SelectedIndexChanged"  SelectedItem="{Binding Gebelikpsibirak}"  >
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Evet</x:String>
+                            <x:String>Hayır</x:String>
+
+                        </x:Array>
+                    </Picker.ItemsSource>
+
+                </Picker>
+
+                <Label x:Name="textgebepsihasta2" Text="33b-Evetse belirtiniz; " TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium" />
+
+                <Picker x:Name="pickergebepsihasta2" Title="{Binding Gebelikpsihasta2}" TextColor="White" TitleColor="White"  SelectedItem="{Binding Gebelikpsihasta2}"  >
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Depresyon</x:String>
+                            <x:String>Anksiyete bozukluğu (kaygı bozukluğu)</x:String>
+                            <x:String>Bipolar bozukluk (iki uçlu duygudurum bozukluğu/manik depresif)</x:String>
+                            <x:String>Şizofreni (psikoz)</x:String>
+                            <x:String>Panik bozukluk (panik atak)</x:String>
+
+
+                        </x:Array>
+                    </Picker.ItemsSource>
+
+                </Picker>
+
+
+
+                <Label x:Name="lblpsisigara" Text="34-Gebelik öncesinde sigara kullanıyor muydunuz?" TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium" />
+                <Picker x:Name="pickergebelikpsisigara" Title="{Binding Gebelikpsisigara}" TextColor="White" TitleColor="White"  SelectedItem="{Binding Gebelikpsisigara}"  >
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Hayır kullanmıyordum</x:String>
+                            <x:String>Evet, bazen</x:String>
+                            <x:String>Evet, hemen her gün</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+
+                </Picker>
+
+                <Label x:Name="lblpsisigara2" Text="35-Gebelik sürecinde sigara kullanıyor musunuz? " TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium" />
+                <Picker x:Name="pickergebelikpsisigara2" Title="{Binding Gebelikpsisigara2}" TextColor="White" TitleColor="White"  SelectedItem="{Binding Gebelikpsisigara2}"  >
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Hayır kullanmıyordum</x:String>
+                            <x:String>Evet, bazen</x:String>
+                            <x:String>Evet, hemen her gün</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+
+                </Picker>
+
+                <Label x:Name="lblgebelikpsibilgi" Text="36-Doğum ile ilgili bilgi aldınız mı?" TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium" />
+                <Picker x:Name="pickerpsibilgi" Title="{Binding Gebelikpsibilgi}" TextColor="White" TitleColor="White"  SelectedItem="{Binding Gebelikpsibilgi}"  >
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Evet</x:String>
+                            <x:String>Hayır</x:String>
+                          
+                        </x:Array>
+                    </Picker.ItemsSource>
+
+                </Picker>
+
+                <Label x:Name="lblgebelikpsibilgikim" Text="37-Doğum ile ilgili bilgiyi kimden aldınız?" TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium" />
+                <Picker x:Name="pickergebelikpsibilgikim" Title="{Binding Gebelikpsibilgikim}" TextColor="White" TitleColor="White"  SelectedItem="{Binding Gebelikpsibilgikim}"  >
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Hemşire</x:String>
+                            <x:String>Ebe</x:String>
+                            <x:String>Doktor</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+
+                </Picker>
+
+                <Label x:Name="lblgebelikpsihareket" Text="38-Bebek hareketlerini hissettiniz mi? " TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium" />
+                <Picker x:Name="pickergebelikpsihareket" Title="{Binding Gebelikpsihareket}" TextColor="White" TitleColor="White"  SelectedItem="{Binding Gebelikpsihareket}"  >
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Evet</x:String>
+                            <x:String>Hayır</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+
+                </Picker>
+
+                <Label x:Name="lblgebehareket" Text="39-Bugün Bebek hareketlerini hissettiniz mi?" TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium" />
+                <Picker x:Name="pickergebehareket" Title="{Binding Gebelikpsihareket2}" TextColor="White" TitleColor="White"  SelectedItem="{Binding Gebelikpsihareket2}"  >
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Evet</x:String>
+                            <x:String>Hayır</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+
+                </Picker>
+
+                <Label x:Name="lblgebeegzersiz" Text="40-Gebeliğiniz süresinde egzersiz (yürüyüş, dans, yoga vb) yapıyor musunuz?" TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium" />
+                <Picker x:Name="pickergebeegzersiz" Title="{Binding Gebelikpsidans}" TextColor="White" TitleColor="White"  SelectedItem="{Binding Gebelikpsidans}"  >
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Evet hemen her gün</x:String>
+                            <x:String>Haftada 3-4 gün</x:String>
+                            <x:String>Haftada 1-2 gün</x:String>
+                            <x:String>Egzersiz yapmıyorum</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+
+                </Picker>
+
+                <Label x:Name="lblacikhava" Text="41-Gebeliğiniz süresinde 1 günde yaklaşık ne kadar süre açık havada vakit geçirirsiniz?  " TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium" />
+                <Picker x:Name="pickeracikhava" Title="{Binding Gebelikpsiacikhava}" TextColor="White" TitleColor="White"  SelectedItem="{Binding Gebelikpsiacikhava}"  >
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Günde 0-1 saat</x:String>
+                            <x:String>2-3 saat</x:String>
+                            <x:String>4-5 saat</x:String>
+                            <x:String>6-7 saat</x:String>
+                            <x:String>8-9 saat</x:String>
+                            <x:String>9 saatten fazla</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+
+                </Picker>
+
+                <Label x:Name="lblpsisosyal" Text="42-Sosyal medya hesabınız var mı?" TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium" />
+                <Picker x:Name="pickerpsisosyal" Title="{Binding Gebelikpsisosyal}" TextColor="White" TitleColor="White"  SelectedItem="{Binding Gebelikpsisosyal}"  >
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Evet</x:String>
+                            <x:String>Hayır</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+
+                </Picker>
+
+                <Label x:Name="lblsosyalmedya" Text="43-Sosyal medya kullanıyorsanız gebeliğiniz sürecinde ne sıklıkta paylaşım yaptınız? " TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium" />
+                <Picker x:Name="pickersosyalmedya" Title="{Binding Gebelikpsisosyalsure2}" TextColor="White" TitleColor="White"  SelectedItem="{Binding Gebelikpsisosyalsure2}"  >
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Hemen her gün</x:String>
+                            <x:String>Haftada birkaç kez</x:String>
+                            <x:String>Ayda birkaç kez</x:String>
+                            <x:String>Ayda birden az</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+
+                </Picker>
+
+                <Label x:Name="lblsosyal" Text="44-Sosyal medyada 1 günde ortalama ne kadar süre geçirirsiniz?" TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium" />
+                <Picker x:Name="pickersosyal" Title="{Binding Gebelikpsisosyalsure}" TextColor="White" TitleColor="White"  SelectedItem="{Binding Gebelikpsisosyalsure}"  >
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>1-30 dakika arası</x:String>
+                            <x:String>30 dk -1 saat arası</x:String>
+                            <x:String>1-2 saat arası</x:String>
+                            <x:String>2-3saat arası</x:String>
+                            <x:String>3-6 saat arası</x:String>
+                            <x:String>6 saatten fazla</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+
+                </Picker>
+
+                <Label x:Name="lblsosyalbilgi" Text="45-Sosyal medya veya interneti gebelik hakkında bilgi edinmek için kullanır mısınız?" TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium" />
+                <Picker x:Name="pickersosyalbilgi" Title="{Binding Gebelikpsisosyalbilgi}" TextColor="White" TitleColor="White"  SelectedItem="{Binding Gebelikpsisosyalbilgi}"  >
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Sık sık kullanırım</x:String>
+                            <x:String>Bazen  kullanırım</x:String>
+                            <x:String>Hayır kullanmam</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+
+                </Picker>
+
+                <Label x:Name="lblthastalik" Text="46-Daha ÖNCEKİ gebeliğiniz sırasında ortaya çıkan tıbbi bir hastalığınız oldu mu?(Birden fazla seçenek işaretleyebilirsiniz.)" TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium" />
+                <Label x:Name="lblgebecake" HorizontalOptions="Center" HorizontalTextAlignment="Center" Text="Hayır /Yok" TextColor="DeepPink" Padding="20,10,20,0" />
+                <CheckBox x:Name="checke" IsChecked="{Binding Gebecake}"  HorizontalOptions="Center"/>
+
+                <Label x:Name="lblgebecakf" HorizontalOptions="Center" HorizontalTextAlignment="Center" Text="Diyabet (Gebelikte yüksek şeker)  " TextColor="DeepPink" Padding="20,0,20,0" />
+                <CheckBox x:Name="checkf"   IsChecked="{Binding Gebecakf}"  HorizontalOptions="Center"/>
+
+                <Label x:Name="lblgebecakg" HorizontalOptions="Center" HorizontalTextAlignment="Center" Text="Hipertansiyon (Gebelikte yüksek tansiyon)  " TextColor="DeepPink" Padding="20,0,20,0" />
+                <CheckBox  x:Name="checkg" IsChecked="{Binding Gebecakg}"  HorizontalOptions="Center"/>
+
+                <Label x:Name="lblgebecakh" HorizontalOptions="Center" HorizontalTextAlignment="Center" Text="Gebelik zehirlenmesi (Preeklampsi) " TextColor="DeepPink" Padding="20,0,20,0" />
+                <CheckBox  x:Name="checkh"  IsChecked="{Binding Gebecakh}"   HorizontalOptions="Center"/>
+
+                <Label x:Name="lblgebecaki" HorizontalOptions="Center" HorizontalTextAlignment="Center" Text="Tiroid hastalığı (Guatr)  " TextColor="DeepPink" Padding="20,10,20,0" />
+                <CheckBox  x:Name="checki" IsChecked="{Binding Gebecaki}"  HorizontalOptions="Center"/>
+
+                <Label x:Name="lblgebecakj" HorizontalOptions="Center" HorizontalTextAlignment="Center" Text="Migren" TextColor="DeepPink" Padding="20,0,20,0" />
+                <CheckBox  x:Name="checkj"  IsChecked="{Binding Gebecakj}"   HorizontalOptions="Center"/>
+
+                <Label x:Name="lblgebecakk" HorizontalOptions="Center" HorizontalTextAlignment="Center" Text="Plasenta Previa (Yanlış yerleşimli plasenta) " TextColor="DeepPink" Padding="20,0,20,0" />
+                <CheckBox  x:Name="checkk" IsChecked="{Binding Gebecakk}"   HorizontalOptions="Center"/>
+
+                <Label x:Name="lblgebecakl" HorizontalOptions="Center" HorizontalTextAlignment="Center" Text="Plasenta Dekolmanı (Plasentanın erken ayrılması)  " TextColor="DeepPink" Padding="20,0,20,0" />
+                <CheckBox  x:Name="checkl"  IsChecked="{Binding Gebecakl}"    HorizontalOptions="Center"/>
+
+                <Label x:Name="lbldigerhastalik"  Text="46b-Yukarıda yer almayan başka bir hastalığınız var mıydı"  Padding="10,10,0,0" FontSize="Medium" TextColor="DeepPink" />
+                <Entry x:Name="entrydigerhastalik"  Text="{Binding Digerhastalik}  " PlaceholderColor="White" TextColor="White" />
+
+                <Label x:Name="lbltani2" Text="47-Daha ÖNCEKİ gebeliklerinizde herhangi bir psikiyatrik tanı aldınız mı?(Uygun seçeneği/seçenekleri işaretleyiniz.)" TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium" />
+                <Label x:Name="lblcakm" HorizontalOptions="Center" HorizontalTextAlignment="Center" Text="Hayır" TextColor="DeepPink" Padding="20,10,20,0" />
+                <CheckBox x:Name="checkm"  IsChecked="{Binding Gebecakm}"  HorizontalOptions="Center"/>
+
+                <Label x:Name="lblcakn" HorizontalOptions="Center" HorizontalTextAlignment="Center" Text="Gebelikte" TextColor="DeepPink" Padding="20,0,20,0" />
+                <CheckBox x:Name="checkn"  IsChecked="{Binding Gebecakn}"  HorizontalOptions="Center"/>
+
+                <Label x:Name="lblcako" HorizontalOptions="Center" HorizontalTextAlignment="Center" Text="Doğum Sonrasında" TextColor="DeepPink" Padding="20,0,20,0" />
+                <CheckBox x:Name="checko" IsChecked="{Binding Gebecako}"  HorizontalOptions="Center"/>
+
+
+                <Label x:Name="lbltani" Text="47b-Tanı aldıysanız belirtiniz;" TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium" />
+                <Label x:Name="lblcakv" HorizontalOptions="Center" HorizontalTextAlignment="Center" Text="Tanı almadım" TextColor="DeepPink" Padding="20,10,20,0" />
+                <CheckBox x:Name="cakv"  IsChecked="{Binding Gebecakv}"  HorizontalOptions="Center"/>
+                <Label x:Name="lblcakp" HorizontalOptions="Center" HorizontalTextAlignment="Center" Text="Depresyon" TextColor="DeepPink" Padding="20,10,20,0" />
+                <CheckBox x:Name="cakp"  IsChecked="{Binding Gebecakp}"  HorizontalOptions="Center"/>
+
+                <Label x:Name="lblcakr" HorizontalOptions="Center" HorizontalTextAlignment="Center" Text="Anksiyete bozukluğu (kaygı bozukluğu)" TextColor="DeepPink" Padding="20,0,20,0" />
+                <CheckBox x:Name="cakr"  IsChecked="{Binding Gebecakr}"  HorizontalOptions="Center"/>
+
+                <Label x:Name="lblcaks" HorizontalOptions="Center" HorizontalTextAlignment="Center" Text="Bipolar bozukluk (iki uçlu duygudurum bozukluğu/manik depresif)" TextColor="DeepPink" Padding="20,0,20,0" />
+                <CheckBox x:Name="caks" IsChecked="{Binding Gebecaks}"  HorizontalOptions="Center"/>
+
+                <Label x:Name="lblcakt" HorizontalOptions="Center" HorizontalTextAlignment="Center" Text="Şizofreni (psikoz)  " TextColor="DeepPink" Padding="20,0,20,0" />
+                <CheckBox  x:Name="cakt" IsChecked="{Binding Gebecakt}"   HorizontalOptions="Center"/>
+
+                <Label x:Name="lblcaku" HorizontalOptions="Center" HorizontalTextAlignment="Center" Text="Panik bozukluk (panik atak)" TextColor="DeepPink" Padding="20,10,20,0" />
+                <CheckBox x:Name="caku" IsChecked="{Binding Gebecaku}"  HorizontalOptions="Center"/>
+
+                <Label x:Name="lbldigerhastalik2" Text="47c-Yukarıda yer almayan başka bir tanı aldınız mı?"  Padding="10,10,0,0" FontSize="Medium" TextColor="DeepPink" />
+                <Entry x:Name="entrydigerhastalik2" Text="{Binding Digerhastalik2}  " PlaceholderColor="White" TextColor="White" />
+
+                <Label x:Name="lbldigerhastalik3" Text="48-Psikiyatrik bir tanı  aldıysanız  bunun için bir ilaç tedavisi , EKT, TMS vb  gördünüz mü ?(birden fazla şık işaretleyebilirsiniz)" TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium" />
+                <Label x:Name="lblcaky" HorizontalOptions="Center" HorizontalTextAlignment="Center" Text="Hayır" TextColor="DeepPink" Padding="20,10,20,0" />
+                <CheckBox x:Name="caky"  IsChecked="{Binding Gebecaky}"  HorizontalOptions="Center"/>
+                <Label x:Name="lblcakz"  HorizontalOptions="Center" HorizontalTextAlignment="Center" Text="Gebelikte" TextColor="DeepPink" Padding="20,10,20,0" />
+                <CheckBox x:Name="cakz"   IsChecked="{Binding Gebecakz}"  HorizontalOptions="Center"/>
+
+                <Label x:Name="lblcake1"  HorizontalOptions="Center" HorizontalTextAlignment="Center" Text="Doğum Sonrasında" TextColor="DeepPink" Padding="20,0,20,0" />
+                <CheckBox x:Name="cake1"    IsChecked="{Binding Gebecake1}"  HorizontalOptions="Center"/>
+
+                <Label x:Name="lblterapist" Text="49-Psikiyatrik bir tanı aldıysanız bunun için bir psikoterapi aldınız mı?(birden fazla şık işaretleyebilirsiniz)" TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium" />
+                <Label x:Name="lblcakf1" HorizontalOptions="Center" HorizontalTextAlignment="Center" Text="Hayır" TextColor="DeepPink" Padding="20,10,20,0" />
+                <CheckBox x:Name="cakf1"  IsChecked="{Binding Gebecakf1}"  HorizontalOptions="Center"/>
+                <Label x:Name="lblcakg1" HorizontalOptions="Center" HorizontalTextAlignment="Center" Text="Gebelikte" TextColor="DeepPink" Padding="20,10,20,0" />
+                <CheckBox x:Name="cakg1"   IsChecked="{Binding Gebecakg1}"  HorizontalOptions="Center"/>
+
+                <Label x:Name="lblcake12" HorizontalOptions="Center" HorizontalTextAlignment="Center" Text="Doğum Sonrasında" TextColor="DeepPink" Padding="20,0,20,0" />
+                <CheckBox x:Name="cake12"   IsChecked="{Binding Gebecakh1}"  HorizontalOptions="Center"/>
+
+
+                <Label x:Name="lblsaglik2" Text="50-ÖNCEKİ gebeliğinizde bebeğinizin sağlık sorunu var mıydı, varsa neydi?(Birden fazla seçenek işaretleyebilirsiniz)" TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium" />
+                <Label x:Name="lblcaki1" HorizontalOptions="Center" HorizontalTextAlignment="Center" Text="Hayır yok" TextColor="DeepPink" Padding="20,10,20,0" />
+                <CheckBox x:Name="caki1"  IsChecked="{Binding Gebecaki1}"  HorizontalOptions="Center"/>
+                <Label x:Name="lblcakj1"  HorizontalOptions="Center" HorizontalTextAlignment="Center" Text="Solunum sıkıntısı" TextColor="DeepPink" Padding="20,10,20,0" />
+                <CheckBox x:Name="cakij"   IsChecked="{Binding Gebecakj1}"  HorizontalOptions="Center"/>
+
+                <Label x:Name="lblcakk1"  HorizontalOptions="Center" HorizontalTextAlignment="Center" Text="Kardiyak malformasyon (kalp hastalığı)" TextColor="DeepPink" Padding="20,0,20,0" />
+                <CheckBox  x:Name="cakk1"   IsChecked="{Binding Gebecakk1}"  HorizontalOptions="Center"/>
+                <Label x:Name="lblcakl1" HorizontalOptions="Center" HorizontalTextAlignment="Center" Text="Persistan pulmoner hipertansiyon " TextColor="DeepPink" Padding="20,10,20,0" />
+                <CheckBox x:Name="cakl1"  IsChecked="{Binding Gebecakl1}"  HorizontalOptions="Center"/>
+                <Label x:Name="lblcakm1"  HorizontalOptions="Center" HorizontalTextAlignment="Center" Text="IUGR (gelişme geriliği)" TextColor="DeepPink" Padding="20,10,20,0" />
+                <CheckBox x:Name="cakm1"  IsChecked="{Binding Gebecakm1}"  HorizontalOptions="Center"/>
+
+                <Label x:Name="lblcakn1"  HorizontalOptions="Center" HorizontalTextAlignment="Center" Text="Erken doğum " TextColor="DeepPink" Padding="20,0,20,0" />
+                <CheckBox  x:Name="cakn1"   IsChecked="{Binding Gebecakn1}"  HorizontalOptions="Center"/>
+                <Label x:Name="lblcako1"  HorizontalOptions="Center" HorizontalTextAlignment="Center" Text="Düşük doğum ağırlığı  " TextColor="DeepPink" Padding="20,0,20,0" />
+                <CheckBox  x:Name="cako1"   IsChecked="{Binding Gebecako1}"  HorizontalOptions="Center"/>
+
+                <Label x:Name="lblsaglik" Text="51-ÖNCEKİ gebeliğinizde bebeğinizin hastaneye yatması gereken sağlık sorunu oldu mu?" TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium" />
+                <Picker x:Name="pickersaglik" Title="{Binding Gebelikpsisosyalbilgi}" TextColor="White" TitleColor="White"  SelectedItem="{Binding Gebelikpsisosyalbilgi}"  >
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Evet</x:String>
+                            <x:String>Hayır</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+
+                </Picker>
+
+                <Label x:Name="lblhastane"  Text="51b-Yattıysa kaç gün hastanede kaldı?"  Padding="10,10,0,0" FontSize="Medium" TextColor="DeepPink" />
+                <Entry x:Name="entrybebekhastanesure"   Text="{Binding Bebekhastanesure}  " PlaceholderColor="White" TextColor="White" />
+
+                <Label x:Name="lblesyas"  Text="52-Eşinizin yaşı nedir?"  Padding="10,10,0,0" FontSize="Medium" TextColor="DeepPink" />
+                <Entry x:Name="entryesyas"   Text="{Binding Bebekhastanesure}  " PlaceholderColor="White" TextColor="White" />
+
+                <Label x:Name="lblesegitim" Text="53-Eşinizin eğitim durumu nedir?" TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium" />
+                <Picker x:Name="pickeresegitim" Title="{Binding Esegitim}" TextColor="White" TitleColor="White"  SelectedItem="{Binding Esegitim}"  >
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Okuryazar değil</x:String>
+                            <x:String>Okuryazar</x:String>
+                            <x:String>İlkokul mezunu</x:String>
+                            <x:String>Ortaokul mezunu</x:String>
+                            <x:String>Lise mezunu</x:String>
+                            <x:String>Üniversite mezunu</x:String>
+                            <x:String>Yüksek Lisans/Doktora mezunu</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+
+                </Picker>
+
+                <Label x:Name="lblescalisma" Text="54-Eşinizin çalışma durumu nedir?" TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium" />
+                <Picker x:Name="pickerrescalisma" Title="{Binding Escalisma}" TextColor="White" TitleColor="White"  SelectedItem="{Binding Escalisma}"  >
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>İşsiz /Çalışmıyor</x:String>
+                            <x:String>Düzenli bir işte çalışıyor</x:String>
+                            <x:String>Düzensiz olarak çalışıyor</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+
+                </Picker>
+
+                <Label x:Name="lbleshasta" Text="55-Eşinizin fiziksel ya da kronik bir hastalığı var mı? (Hipertansiyon,Diyabet,Kanser,Engellilik,Kas iskelet hastalığı v.b.)" TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium" />
+                <Picker x:Name="pickereshasta" Title="{Binding Eshastalik}" TextColor="White" TitleColor="White"  SelectedItem="{Binding Eshastalik}"  >
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Evet</x:String>
+                            <x:String>Hayır</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+
+                </Picker>
+
+                <Label x:Name="lblolumsuz" Text="56- Eşinizin ek tıbbı hastalığı varsa günlük yaşamını olumsuz etkiyor mu? " TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium" />
+                <Picker x:Name="pickerolumsuz" Title="{Binding Eshastalikolumsuz}" TextColor="White" TitleColor="White"  SelectedItem="{Binding Eshastalikolumsuz}"  >
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Evet</x:String>
+                            <x:String>Hayır</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+
+                </Picker>
+
+                <Label x:Name="lblruhsal2" Text="57-Eşinizin ruhsal hastalığı var mı? (Depresyon,Panik Bozlukluk,Psikoz v.b.) " TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium" />
+                <Picker x:Name="pickerruhsal2" Title="{Binding Eshastalikruhsal}" TextColor="White" TitleColor="White"  SelectedItem="{Binding Eshastalikruhsal}"  >
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Evet</x:String>
+                            <x:String>Hayır</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+
+                </Picker>
+
+                <Label x:Name="lblruhsal" Text="58- Eşinizin ruhsal hastalığı varsa günlük yaşamını olumsuz etkiyor mu?" TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium" />
+                <Picker x:Name="pickerruhsal" Title="{Binding Eshastalikruhsalolumsuz}" TextColor="White" TitleColor="White"  SelectedItem="{Binding Eshastalikruhsalolumsuz}"  >
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Evet</x:String>
+                            <x:String>Hayır</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+
+                </Picker>
+
+                <Label x:Name="lblsigara" Text="59-Son 1 yılı değerlendirdiğinizde eşiniz sigara içer mi? " TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium" />
+                <Picker x:Name="pickersigara" Title="{Binding Essigara}" TextColor="White" TitleColor="White"  SelectedItem="{Binding Essigara}"  >
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Hayır kullanmıyor</x:String>
+                            <x:String>Evet, bazen</x:String>
+                            <x:String>Evet, hemen her gün</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+
+                </Picker>
+
+                <Label x:Name="lblesalkol" Text="60- Son 1 yılı değerlendirdiğinizde eşiniz alkol kullanır mı? " TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium" />
+                <Picker x:Name="pcikeresalkol" Title="{Binding Esalkol}" TextColor="White" TitleColor="White"  SelectedItem="{Binding Esalkol}"  >
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Hayır kullanmıyor</x:String>
+                            <x:String>Evet, bazen</x:String>
+                            <x:String>Evet, hemen her gün</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+
+                </Picker>
+
+                <Label x:Name="lblesmadde" Text="61- Son 1 yılı değerlendirdiğinizde eşiniz madde kullanır mı? " TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium" />
+                <Picker x:Name="pickeresmadde" Title="{Binding Esmadde}" TextColor="White" TitleColor="White"  SelectedItem="{Binding Esmadde}"  >
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Hayır kullanmıyor</x:String>
+                            <x:String>Evet, bazen</x:String>
+                            <x:String>Evet, hemen her gün</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+
+                </Picker>
+                <Label x:Name="lblesiletisim"  Text="62-Eşinizle iletişiminiz ne kadar iyi diye sorduğumuzda 0'dan 10'a kadar puan verseniz kaç puan verirsiniz?   (0 en kötü, 10 en iyi puan)"  Padding="10,10,0,0" FontSize="Medium" TextColor="DeepPink" />
+                <Entry x:Name="entryesiletisim" Keyboard="Numeric"   Text="{Binding Esiletisim}  " PlaceholderColor="White" TextColor="White" />
+
+                <Label x:Name="lblesduygusal"  Text="63-Doğum sonrası eşinizin size olan duygusal desteğine 0'dan 10'a kadar puan verseniz kaç puan verirsiniz?   (0 en kötü, 10 en iyi puan)"  Padding="10,10,0,0" FontSize="Medium" TextColor="DeepPink" />
+                <Entry x:Name="entryesduygusal" Keyboard="Numeric"    Text="{Binding Esduygusal}  " PlaceholderColor="White" TextColor="White" />
+
+
+                <Label x:Name="lblessiddet" Text="64a-Gebelik sürecinde eşiniz size şiddet uyguladı mı? Fiziksel ve cinsel şiddet:( İtme, yumruklama, tokat vurma, tutup fırlatma,  boğma, sivri bir alet/bıçak vb. saplama, ateş etme, ilişkiye zorlama vb. )" TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium" />
+                <Picker x:Name="pickeressiddet" Title="{Binding Esfsiddet}" TextColor="White" TitleColor="White"  SelectedItem="{Binding Esfsiddet}"  >
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                         
+                            <x:String>Evet</x:String>
+                            <x:String>Hayır</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+
+                </Picker>
+
+                <Label x:Name="lblesduygusalsiddet" Text="64b-Duygusal  şiddet :( aşırı biçimde eleştirmek, tehdit etmek, aşağılamak, hakaret etmek, utandırmak, hiç iletişime geçmemek, başkalarıyla iletişimini engellemek, duygusal olarak ihmal etmek, yalan söylemek, küçümsemek, görmezden gelmek, kendi çıkarları için kullanmak)" TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium" />
+                <Picker x:Name="pickeresduygusalsiddet" Title="{Binding Esdsiddet}" TextColor="White" TitleColor="White"  SelectedItem="{Binding Esdsiddet}"  >
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+
+                            <x:String>Evet</x:String>
+                            <x:String>Hayır</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+
+                </Picker>
+
+                <Label x:Name="lblesekonomiksiddet" Text="64c-Ekonomik şiddet : ( Bütün parasal  kontrolün eş tarafından kendi  istekleri doğrultusunda kontrol edilmesi, paraya ulaşımın  engellenmesi) " TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium" />
+                <Picker x:Name="pickeresekonomiksiddet" Title="{Binding Esesiddet}" TextColor="White" TitleColor="White"  SelectedItem="{Binding Esesiddet}"  >
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+
+                            <x:String>Evet</x:String>
+                            <x:String>Hayır</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+
+                </Picker>
+
+
+                <Label x:Name="lblpsikan" Text="65a-Ailede(Kan bağı ile bağlı olan) ruhsal hastalık öyküsü var mı? " TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium" />
+                <Picker x:Name="pickerpsikan" Title="{Binding Gebelikpsikan}" TextColor="White" TitleColor="White" SelectedIndexChanged="pickerpsikan_SelectedIndexChanged"  SelectedItem="{Binding Gebelikpsikan}"  >
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Evet</x:String>
+                            <x:String>Hayır</x:String>
+
+                        </x:Array>
+                    </Picker.ItemsSource>
+
+                </Picker>
+
+                <Label x:Name="textpsikan" Text="65b.Evetse belirtiniz" TextColor="DeepPink" Padding="10,0,10,0" FontSize="Medium" />
+
+                <Picker x:Name="pickerpsikan2" Title="{Binding Gebelikpsikan2}" TextColor="White" TitleColor="White"  SelectedItem="{Binding Gebelikpsikan2}"  >
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Depresyon</x:String>
+                            <x:String>Anksiyete bozukluğu (kaygı bozukluğu)</x:String>
+                            <x:String>Bipolar bozukluk (iki uçlu duygudurum bozukluğu/manik depresif)</x:String>
+                            <x:String>Şizofreni (psikoz)</x:String>
+                            <x:String>Panik bozukluk (panik atak)</x:String>
+
+
+                        </x:Array>
+                    </Picker.ItemsSource>
+
+                </Picker>
+                <Label x:Name="lblspikan2"  Text="65c.Yukarıda yer almayan başka bir hastalığınız var mıydı"  Padding="10,10,0,0" FontSize="Medium" TextColor="DeepPink" />
+                <Entry x:Name="entrykan"  Text="{Binding Gebelikpsikan3}  " PlaceholderColor="White" TextColor="White" />
+                <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand">
+                    <Button x:Name="Onceki" Text="Onceki" Clicked="Onceki_Clicked" BackgroundColor="White"  Margin="15,15"  CornerRadius="20" BorderWidth="1" BorderColor="Black"  >
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal">
+                                    <VisualState.Setters>
+                                        <Setter Property="BackgroundColor" Value="White" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                                <VisualState x:Name="Pressed">
+                                    <VisualState.Setters>
+                                        <Setter Property="BackgroundColor" Value="Pink" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                    </Button>
+                    <Button x:Name="Sonraki" Text="Sonraki" Clicked="Sonraki_Clicked" BackgroundColor="White"  HorizontalOptions="EndAndExpand" Margin="15,15" CornerRadius="20" BorderWidth="1" BorderColor="Black">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal">
+                                    <VisualState.Setters>
+                                        <Setter Property="BackgroundColor" Value="White" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                                <VisualState x:Name="Pressed">
+                                    <VisualState.Setters>
+                                        <Setter Property="BackgroundColor" Value="Pink" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                    </Button>
+                </StackLayout>
+                <Button x:Name="btnbitti" Text="Bitti" Clicked="Button_Clicked" BorderColor="Black" BackgroundColor="LawnGreen" VerticalOptions="Center" HorizontalOptions="Center"   />
+            
+            
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
