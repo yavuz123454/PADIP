@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LhKJgZANtduobtqApA9VFOUIOQeGJVkij4tTqjGcgHQbhXma4JZaoS4Swc7nP4RTk6GasczabZASZTS4RIxfTg==",
+  "dgSpecHash": "Uc/ZOy//z1IdQwCwI8UtoC1/Ier1L4WnFTGxzqZm9te3bSj6ktmC2W16eBxvtjVOmL76m7bW5iIFwNBwOxBVlw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\yavuz selim\\source\\repos\\PADIP\\PADIP\\PADIP.Android\\PADIP.Android.csproj",
+  "projectFilePath": "C:\\Users\\yavuz selim\\Documents\\GitHub\\PADIP\\PADIP\\PADIP\\PADIP.Android\\PADIP.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\yavuz selim\\.nuget\\packages\\firebasedatabase.net\\4.0.4\\firebasedatabase.net.4.0.4.nupkg.sha512",
     "C:\\Users\\yavuz selim\\.nuget\\packages\\litedb\\4.1.4\\litedb.4.1.4.nupkg.sha512",

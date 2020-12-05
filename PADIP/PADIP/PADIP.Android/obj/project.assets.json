@@ -2362,11 +2362,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\yavuz selim\\source\\repos\\PADIP\\PADIP\\PADIP.Android\\PADIP.Android.csproj",
+      "projectUniqueName": "C:\\Users\\yavuz selim\\Documents\\GitHub\\PADIP\\PADIP\\PADIP\\PADIP.Android\\PADIP.Android.csproj",
       "projectName": "PADIP.Android",
-      "projectPath": "C:\\Users\\yavuz selim\\source\\repos\\PADIP\\PADIP\\PADIP.Android\\PADIP.Android.csproj",
+      "projectPath": "C:\\Users\\yavuz selim\\Documents\\GitHub\\PADIP\\PADIP\\PADIP\\PADIP.Android\\PADIP.Android.csproj",
       "packagesPath": "C:\\Users\\yavuz selim\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\yavuz selim\\source\\repos\\PADIP\\PADIP\\PADIP.Android\\obj\\",
+      "outputPath": "C:\\Users\\yavuz selim\\Documents\\GitHub\\PADIP\\PADIP\\PADIP\\PADIP.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -2387,8 +2387,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "C:\\Users\\yavuz selim\\source\\repos\\PADIP\\PADIP\\PADIP\\PADIP.csproj": {
-              "projectPath": "C:\\Users\\yavuz selim\\source\\repos\\PADIP\\PADIP\\PADIP\\PADIP.csproj"
+            "C:\\Users\\yavuz selim\\Documents\\GitHub\\PADIP\\PADIP\\PADIP\\PADIP\\PADIP.csproj": {
+              "projectPath": "C:\\Users\\yavuz selim\\Documents\\GitHub\\PADIP\\PADIP\\PADIP\\PADIP\\PADIP.csproj"
             }
           }
         }

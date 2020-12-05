@@ -1670,11 +1670,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\yavuz selim\\source\\repos\\PADIP\\PADIP\\PADIP.iOS\\PADIP.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\yavuz selim\\Documents\\GitHub\\PADIP\\PADIP\\PADIP\\PADIP.iOS\\PADIP.iOS.csproj",
       "projectName": "PADIP.iOS",
-      "projectPath": "C:\\Users\\yavuz selim\\source\\repos\\PADIP\\PADIP\\PADIP.iOS\\PADIP.iOS.csproj",
+      "projectPath": "C:\\Users\\yavuz selim\\Documents\\GitHub\\PADIP\\PADIP\\PADIP\\PADIP.iOS\\PADIP.iOS.csproj",
       "packagesPath": "C:\\Users\\yavuz selim\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\yavuz selim\\source\\repos\\PADIP\\PADIP\\PADIP.iOS\\obj\\",
+      "outputPath": "C:\\Users\\yavuz selim\\Documents\\GitHub\\PADIP\\PADIP\\PADIP\\PADIP.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -1695,8 +1695,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\yavuz selim\\source\\repos\\PADIP\\PADIP\\PADIP\\PADIP.csproj": {
-              "projectPath": "C:\\Users\\yavuz selim\\source\\repos\\PADIP\\PADIP\\PADIP\\PADIP.csproj"
+            "C:\\Users\\yavuz selim\\Documents\\GitHub\\PADIP\\PADIP\\PADIP\\PADIP\\PADIP.csproj": {
+              "projectPath": "C:\\Users\\yavuz selim\\Documents\\GitHub\\PADIP\\PADIP\\PADIP\\PADIP\\PADIP.csproj"
             }
           }
         }

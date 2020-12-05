@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vmGUeUq2zLJ97Sjf6z0l/3BYggva/2zDdekB5xJC+gS9H+NmDLt86N3BDYaKcHlGWoLLosEB5C5rO8YcshIs8g==",
+  "dgSpecHash": "vZhLFoFBUhsGeXEx5D+xZnMIA1EZOY0Z7guFGUKJEcadtu5JFfV7JgeLuKUu+JBAL6AhPfPDfC0tnAmrUjJjPw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\yavuz selim\\source\\repos\\PADIP\\PADIP\\PADIP.iOS\\PADIP.iOS.csproj",
+  "projectFilePath": "C:\\Users\\yavuz selim\\Documents\\GitHub\\PADIP\\PADIP\\PADIP\\PADIP.iOS\\PADIP.iOS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\yavuz selim\\.nuget\\packages\\firebasedatabase.net\\4.0.4\\firebasedatabase.net.4.0.4.nupkg.sha512",
     "C:\\Users\\yavuz selim\\.nuget\\packages\\litedb\\4.1.4\\litedb.4.1.4.nupkg.sha512",

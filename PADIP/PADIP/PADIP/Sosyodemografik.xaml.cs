@@ -199,9 +199,10 @@ namespace PADIP
                 {
                     sorusayisi4 = Application.Current.Properties[1000.ToString()].ToString();
                 }
+                sorusayisi5 = sorusayisi5 - 2;
 
-               
-                lblsorusayisi.Text = "Soru" + sorusayisi5.ToString() + "/" + sorusayisi4;
+
+                lblsorusayisi.Text = " Soru : " + sorusayisi5.ToString() + "/" + sorusayisi4;
                 sorukontrol();
             }
         }
@@ -223,7 +224,7 @@ namespace PADIP
                 sorusayisi4 = Application.Current.Properties[1000.ToString()].ToString();
             }
             
-            lblsorusayisi.Text = "Soru" + sorusayisi5.ToString() + "/" + sorusayisi4;
+            lblsorusayisi.Text = " Soru : " + sorusayisi5.ToString() + "/" + sorusayisi4;
             sorukontrol();
         }
         private void sorukontrol()
@@ -480,119 +481,119 @@ namespace PADIP
 
                     lblad.IsVisible = true;
                     entryad.IsVisible = true;
-                    sorusayisi5 = 1;
+                    sorusayisi5 = 2;
                     break;
 
                 case 2:
                     lblyas.IsVisible = true;
                     entryyas.IsVisible = true;
-                    sorusayisi5 = 2;
+                    sorusayisi5 = 3;
                     break;
 
                 case 3:
                     lblyer.IsVisible = true;
                     pickeryer.IsVisible = true;
-                    sorusayisi5 = 3;
+                    sorusayisi5 = 4;
                     break;
 
 
                 case 4:
                    lblmedeni.IsVisible = true;
                     pickermedeni.IsVisible = true;
-                    sorusayisi5 = 4;
+                    sorusayisi5 = 5;
 
                     break;
                 case 5:
                     lblboy.IsVisible = true;
                     entryboy.IsVisible = true;
-                    sorusayisi5 = 5;
+                    sorusayisi5 = 6;
 
                     break;
 
                 case 6:
                     lblkilo.IsVisible = true;
                     entrykilo.IsVisible = true;
-                    sorusayisi5 = 6;
+                    sorusayisi5 = 7;
                     break;
 
                 case 7:
                     lblkilogebe.IsVisible = true;
                     entrykilogebe.IsVisible = true;
-                    sorusayisi5 = 7;
+                    sorusayisi5 = 8;
                     break;
 
                 case 8:
                    lblegitim.IsVisible = true;
                     pickeregitim.IsVisible = true;
-                    sorusayisi5 = 8;
+                    sorusayisi5 = 9;
 
                     break;
 
                 case 9:
                     lblcalisma.IsVisible = true;
                     pickercalisma.IsVisible = true;
-                    sorusayisi5 = 9;
+                    sorusayisi5 = 10;
                     break;
 
                 case 10:
                     lblguvence.IsVisible = true;
                     pickerguvence.IsVisible = true;
-                    sorusayisi5 = 10;
+                    sorusayisi5 = 11;
                     break;
 
                 case 11:
                     lblbirlikte.IsVisible = true;
                     pickerbirlikte.IsVisible = true;
-                    sorusayisi5 = 11;
+                    sorusayisi5 = 12;
                     break;
 
                 case 12:
                     lbltoplam.IsVisible = true;
                     entrytoplam.IsVisible = true;
-                    sorusayisi5 = 12;
+                    sorusayisi5 = 13;
                     break;
 
                 case 13:
                     lblgelir.IsVisible = true;
                     pickergelir.IsVisible = true;
-                    sorusayisi5 = 13;
+                    sorusayisi5 = 14;
                     break;
 
                 case 14:
                     lbltopgebe.IsVisible = true;
                     entrytopgebe.IsVisible = true;
-                    sorusayisi5 = 14;
+                    sorusayisi5 = 15;
                     break;
 
                 case 15:
                     lblkaccocuk.IsVisible = true;
                     enrtykaccocuk.IsVisible = true;
-                    sorusayisi5 = 15;
+                    sorusayisi5 = 16;
                     break;
 
                 case 16:
                     lbloludogum.IsVisible = true;
                     pickeroludogum.IsVisible = true;
-                    sorusayisi5 = 16;
+                    sorusayisi5 = 17;
                     break;
 
                 case 17:
                     lbloludogum2.IsVisible = true;
                     pickeroludogum2.IsVisible = true;
-                    sorusayisi5 = 16;
+                    sorusayisi5 = 17;
 
                     break;
 
                 case 18:
                     lbloludogum3.IsVisible = true;
                     pickeroludogum3.IsVisible = true;
-                    sorusayisi5 = 16;
+                    sorusayisi5 = 17;
                     break;
 
                 case 19:
                     lblkronik.IsVisible = true;
                     pickerkronik.IsVisible = true;
-                    sorusayisi5 = 17;
+                    sorusayisi5 = 18;
                     break;
 
            
@@ -798,31 +799,31 @@ namespace PADIP
                 case 54:
                     lblacikhava.IsVisible = true;
                     pickeracikhava.IsVisible = true;
-
+                    sorusayisi5 = 41;
                     break;
 
                 case 55:
                     lblpsisosyal.IsVisible = true;
                     pickerpsisosyal.IsVisible = true;
-
+                    sorusayisi5 = 42;
                     break;
 
                 case 56:
                     lblsosyalmedya.IsVisible = true;
                     pickersosyalmedya.IsVisible = true;
-
+                    sorusayisi5 = 43;
                     break;
 
                 case 57:
                     lblsosyal.IsVisible = true;
                     pickersosyal.IsVisible = true;
-
+                    sorusayisi5 = 44;
                     break;
 
                 case 58:
                     lblsosyalbilgi.IsVisible = true;
                     pickersosyalbilgi.IsVisible = true;
-
+                    sorusayisi5 = 45;
                     break;
 
                 case 59:
@@ -843,14 +844,14 @@ namespace PADIP
                     checkk.IsVisible = true;
                     lblgebecakl.IsVisible = true;
                     checkl.IsVisible = true;
-                  
+                    sorusayisi5 = 46;
 
                     break;
 
                 case 60:
                     lbldigerhastalik.IsVisible = true;
                     entrydigerhastalik.IsVisible = true;
-
+                    sorusayisi5 = 46;
                     break;
 
 
@@ -862,7 +863,7 @@ namespace PADIP
                     checkn.IsVisible = true;
                     lblcako.IsVisible = true;
                     checko.IsVisible = true;
-                  
+                    sorusayisi5 = 47;
 
                     break;
 
@@ -880,14 +881,14 @@ namespace PADIP
                     cakt.IsVisible = true;
                     lblcaku.IsVisible = true;
                     caku.IsVisible = true;
-                    
+                    sorusayisi5 = 47;
 
                     break;
 
                 case 63:
                     lbldigerhastalik2.IsVisible = true;
                     entrydigerhastalik2.IsVisible = true;
-
+                    sorusayisi5 = 47;
                     break;
 
                 case 64:
@@ -898,6 +899,7 @@ namespace PADIP
                     cakz.IsVisible = true;
                     lblcake1.IsVisible = true;
                     cake1.IsVisible = true;
+                    sorusayisi5 = 48;
                     break;
 
                 case 65:
@@ -1042,13 +1044,18 @@ namespace PADIP
                 sorusayisi3 = Application.Current.Properties[1.ToString()].ToString();
             }
             sorusayisi2 = Convert.ToInt32(sorusayisi3);
+            if (sorusayisi2==0)
+            {
+                sorusayisi2 = 1;
+                Application.Current.Properties[1.ToString()] = sorusayisi2;
+            }
 
             if (Application.Current.Properties.ContainsKey(1000.ToString()))
             {
                 sorusayisi4 = Application.Current.Properties[1000.ToString()].ToString();
             }
 
-            lblsorusayisi.Text = "Soru" + sorusayisi2.ToString() + "/"+sorusayisi4;
+            lblsorusayisi.Text = " Soru : " + sorusayisi5.ToString() + "/"+sorusayisi4;
             sorukontrol();
             
 
