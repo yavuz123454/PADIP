@@ -731,20 +731,20 @@ namespace PADIP
                     checkc1.IsVisible = true;
                     lbld1.IsVisible = true;
                     checkd1.IsVisible = true;
-                    sorusayisi5 = 31;
+                    sorusayisi5 = 32;
 
                     break;
 
                 case 44:
                     lblpsitedavi.IsVisible = true;
                     pickerpsitedavi.IsVisible = true;
-                    sorusayisi5 = 32;
+                    sorusayisi5 = 31;
                     break;
 
                 case 45:
                     lblpsibirak.IsVisible = true;
                     pickerpsibirak.IsVisible = true;
-                    sorusayisi5 = 33;
+                    sorusayisi5 = 31;
                     break;
 
                 case 46:
